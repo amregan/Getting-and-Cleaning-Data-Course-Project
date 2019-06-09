@@ -2,7 +2,7 @@
 
 This Codebook describes the data, variables, and transformations used to create the Tidy Dataset submit for the Getting and Cleaning Data Course Project.  
 
-## Source Data 
+## SOURCE DATA 
 
 ### Source Data Location
 
@@ -50,10 +50,10 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
+##
+## OUTPUT DATA
 
-## Output Data
-
-The following fields are contained in the ouput data set
+The following fields are contained in the ouput data set:
 
 |Variable|Type|Minumum|Maximum|Description|
 |--------|:----:|:-------:|:-------:|-----------|
@@ -126,10 +126,10 @@ The following fields are contained in the ouput data set
 |	freqBodyBodyGyroJerkMag-mean	|	Numeric	|	-1	|	1	|	Mean of frequency domain signal.  Fast Fourier Transform (FFT) was applied.	|
 |	freqBodyBodyGyroJerkMag-stddev	|	Numeric	|	-1	|	1	|	Standard deviation of frequency domain signal.  Fast Fourier Transform (FFT) was applied.	|
 
+##
+## WORKING DATA:
 
-## Working Data
-
-The following fields are used in the run_analysis.R code
+The following fields are used in the run_analysis.R code, they appear in the order in which they are used:
 
 |Variable|Type|Minumum|Maximum|Description|
 |--------|:----:|:-------:|:-------:|-----------|
@@ -149,13 +149,4 @@ The following fields are used in the run_analysis.R code
 |tidyDT|data table|NA|NA|The meanandstdonly dataframe is converted to a data table to make it easier to take the average of the measurements.  The average value of each measurement is calculated by subject id and by activity and stored in this data table.  This data table is written to the output file. |
 
 
- 
- The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. 
- 
- 
-The purpose of this project is to demonstrate my ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. 
-1) a tidy data set as described below, 
-2) a link to a Github repository with your script for performing the analysis, and 
-3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. 
-You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
 
