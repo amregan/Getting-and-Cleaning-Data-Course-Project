@@ -22,19 +22,25 @@ However the feature names were not very tidy:
 
 Per course instructions, I created a script named run_analysis.R to do the following:
 
+- First installed the data.table package if necessary
+
 1. Merges the training and the test sets to create one data set.  
 - Column headers are added to make the data more readable.  
 - Activity labels were stored for later use.   
-- It is important not to change the order of the data in the datasets, otherwise the wrong subject and/or activity could be associated with the measures.  
+- It is important not to change the order of the data in the datasets, otherwise the wrong subject and/or activity could be associated with the measures.
+
 2. Extracts only the measurements on the mean and standard deviation for each measurement.  
 - Based on the fact that these measurements all have "mean" or "std" in the feature name.  
 - Took care to also extract subject id and activity id.
+
 3. Uses descriptive activity names to name the activities in the data set. 
-- Matched the activity id number in the data frame with the corresponding word in the data frame previously saved.      
+- Matched the activity id number in the data frame with the corresponding word in the data frame previously saved.  
+
 4. Appropriately labels the data set with descriptive variable names. 
 - Used sub() function to replace t with time, f with freq
 - Removed the characters ()
 - Changed std to standard deviation.
+
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 - converted the data frame to a data table to make taking the mean easier
 - used lapply to take the mean of each measure grouped by subject id and activity
